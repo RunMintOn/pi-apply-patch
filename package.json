@@ -1,0 +1,30 @@
+{
+  "name": "@runminton/pi-apply-patch",
+  "version": "0.1.0",
+  "description": "Codex-compatible native Lark apply_patch tool for Pi",
+  "license": "MIT",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "apply-patch",
+    "codex",
+    "openai"
+  ],
+  "files": [
+    "unified-edit.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": ">=0.82.0",
+    "@earendil-works/pi-tui": ">=0.82.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "pi": {
+    "extensions": [
+      "./unified-edit.ts"
+    ]
+  }
+}
