@@ -1,6 +1,11 @@
 # @runminton/pi-apply-patch
 
-[![npm](https://img.shields.io/npm/dt/@runminton/pi-apply-patch?style=flat-square)](https://www.npmjs.com/package/@runminton/pi-apply-patch)
+<a href="https://www.npmjs.com/package/@runminton/pi-apply-patch">
+  <img src="https://img.shields.io/npm/dm/@runminton/pi-apply-patch" alt="npm monthly downloads" />
+</a>
+<a href="https://www.npmjs.com/package/@runminton/pi-apply-patch">
+  <img src="https://img.shields.io/npm/dt/@runminton/pi-apply-patch" alt="npm total downloads" />
+</a>
 
 A Pi extension that provides Codex-compatible `apply_patch` file editing.
 
