@@ -1,5 +1,7 @@
 # @runminton/pi-apply-patch
 
+[![npm](https://img.shields.io/npm/dm/@runminton/pi-apply-patch?style=flat-square)](https://www.npmjs.com/package/@runminton/pi-apply-patch)
+
 A Pi extension that provides Codex-compatible `apply_patch` file editing.
 
 On Pi 0.82.0+ grammar-capable OpenAI GPT-5 models, it uses OpenAI native custom/freeform Lark grammar tools. Models without that capability automatically receive a normal `apply_patch({ patch })` function tool instead. The extension retains local Patch parsing, preflight validation, per-file mutation queues, preview rendering, path safety, sequential execution, cancellation boundaries, and partial-commit reporting.
