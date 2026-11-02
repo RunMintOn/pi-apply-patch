@@ -1,30 +1,42 @@
 {
   "name": "@runminton/pi-apply-patch",
-  "version": "0.1.0",
-  "description": "Codex-compatible native Lark apply_patch tool for Pi",
-  "license": "MIT",
-  "keywords": [
-    "pi-package",
-    "pi",
-    "apply-patch",
-    "codex",
-    "openai"
-  ],
+  "version": "1.0.0",
+  "description": "Codex Rust apply_patch engine for Pi, with confirmed-change recovery and actual diffs",
+  "license": "(MIT AND Apache-2.0)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RunMintOn/pi-apply-patch.git"
+  },
+  "keywords": ["pi-package", "pi", "apply-patch", "codex", "openai"],
+  "os": ["darwin"],
+  "cpu": ["arm64"],
   "files": [
-    "unified-edit.ts",
+    "index.ts",
+    "diff-view.ts",
+    "bin/pi-apply-patch",
     "README.md",
-    "LICENSE"
+    "CHANGELOG.md",
+    "LICENSE",
+    "backend/LICENSE",
+    "backend/NOTICE"
   ],
   "peerDependencies": {
-    "@earendil-works/pi-coding-agent": ">=0.82.0",
-    "@earendil-works/pi-tui": ">=0.82.0"
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*",
+    "typebox": "*"
   },
   "publishConfig": {
     "access": "public"
   },
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prepack": "node scripts/check-package.mjs",
+    "typecheck": "node scripts/typecheck.mjs",
+    "test": "node --test test/*.test.mjs",
+    "test:live": "node test/live.mjs"
+  },
   "pi": {
-    "extensions": [
-      "./unified-edit.ts"
-    ]
+    "extensions": ["./index.ts"]
   }
 }

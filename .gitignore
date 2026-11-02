@@ -1,4 +1,7 @@
+.build/
 node_modules/
+bin/
+*.tgz
 coverage/
 .cache/
 .DS_Store
