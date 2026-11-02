@@ -2,6 +2,17 @@
 
 The historical sections below were imported from the local helper prototype. Their checks, paths and commit references describe that prototype, not new executions in this repository. Replacement-package checks are recorded separately below.
 
+## Published 1.0.0 (2026-11-02)
+
+- Before publishing, reran `npm test`: **53 passed**, and `npm run typecheck`: **passed**. Logs: `/tmp/pi-apply-patch-publish-tests.log` and `/tmp/pi-apply-patch-publish-types.log`.
+- Release commit: `61f2f96fa386dc7198fe48235466cfbeda427c8f`, tagged `v1.0.0`. Main, `legacy`, `legacy-v0.1.0`, and the release tag were pushed atomically. The legacy refs retain `9d96408b65c11f697cf2679f93fe5cdc48396362`.
+- GitHub release and tarball: https://github.com/RunMintOn/pi-apply-patch/releases/tag/v1.0.0
+- `npm publish` succeeded. After npm finished processing, registry lookup confirmed version `1.0.0`, `latest: 1.0.0`, `os: darwin`, and `cpu: arm64`. Registry integrity matches the exact published tarball: `sha512-G3p9OgsFQh1QSBZzA8eehnLqHdQ2Fu4fl6PTGIMXQ2nUO+tKzS5f2vH7S84ftL6GyoC5zfPOFmOrnsoxJWW9EQ==`.
+- Actual `pi install npm:@runminton/pi-apply-patch@1.0.0` from npm: **passed**, confined to `PI_CODING_AGENT_DIR=/tmp/pi-apply-patch-published-7KMSVE/agent`. Pi listed the installed package and the bundled helper retained executable permissions. Log: `/tmp/pi-apply-patch-published-7KMSVE/pi-install.log`.
+- Real-Agent recovery against that registry-installed package: **passed**, `openai-codex/gpt-6.1-sol`, using `PI_LIVE_EXTENSION` with no helper override. Log: `/tmp/pi-apply-patch-published-7KMSVE/live.log`. Inspectable events, summary and final files: `/private/var/folders/zh/qf_nccyd0_b0fc84rk8dl4lm0000gp/T/pi-patch-live-z3v7sW/`.
+
+The checks below describe the earlier pre-publication candidate. No user-global Pi package registration was changed during either phase.
+
 ## Rust replacement package candidate (1.0.0, unpublished)
 
 Environment: macOS arm64, Node v24.20.0, installed Pi 1.5.0.
